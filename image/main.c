@@ -7,8 +7,8 @@ int main (int argc, char *argv[])
 	long Red, Green, Blue, None, pixel;
 	FILE *fpr, *fpw;
 	
-	if( argc < 3 ){
-		printf("[ERROR] Usage\t: %s <src file> <dest file>\n", argv[0]);
+	if( argc < 2 ){
+		printf("[ERROR] Usage\t: %s <src file>\n", argv[0]);
 		exit(EXIT_FAILURE);
 	}	
 	
