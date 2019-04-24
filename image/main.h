@@ -49,4 +49,7 @@ void mat_mul_opencl(float *A, float *B, float *C, int ROW_A, int COL_A, int COL_
 
 double get_time();
 
+FILE *connectFile(char *name, char *mode);
+
+long pixel_processing(long Red, long Green, long Blue, long None);
 /////////////////////////////////////

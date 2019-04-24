@@ -42,3 +42,18 @@ double get_time () {
 	gettimeofday(&tv, NULL);
 	return (double)tv.tv_sec + (double)1e-6 * tv.tv_sec;
 }
+
+FILE *connectFile(char *name, char *mode){
+	FILE *fp;
+	if((fp = fopen(name, mode)) == NULL){
+		fprintf(stderr, "File not found");
+		exit(0);
+	}
+	return fp;
+}
+
+long pixel_processing(long Red, long Green, long Blue, long None) {
+	return ((Green << 24) | (Blue << 16) | (None << 8) | (Red));
+}
+
+
