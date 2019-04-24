@@ -9,7 +9,7 @@ opencl.o: opencl.c image.cl main.h
 process.o: process.c main.h
 	$(CC) -c process.c -lOpenCL
 
-running: main.c main.o process.o opencl.o main.h
+running: main.c process.o opencl.o main.h
 	$(CC) $(OBJ) -o running main.c -lOpenCL
 
 clean:
