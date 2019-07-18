@@ -45,6 +45,7 @@ void mat_mul_opencl (float *A, float *B, float *C, int ROW_A, int COL_A, int COL
 		CHECK_ERROR(err);
 
 		log = (char *)malloc(log_size + 1);
+		memset(log, 0, log_size+1);
 		err = clGetProgramBuildInfo(program, device, CL_PROGRAM_BUILD_LOG, log_size, log, NULL);	
 		CHECK_ERROR(err);
 

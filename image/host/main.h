@@ -51,5 +51,5 @@ double get_time();
 
 FILE *connectFile(char *name, char *mode);
 
-int pixel_processing( int Red, int Green, int Blue, int None);
+void pixel_processing( int Red, int Green, int Blue, int None,unsigned char *pixel);
 /////////////////////////////////////

@@ -52,14 +52,15 @@ FILE *connectFile(char *name, char *mode){
 	return fp;
 }
 
-int pixel_processing(int Red, int Green, int Blue, int None) {
-	int pixel;
+void pixel_processing(int Red, int Green, int Blue, int None, unsigned char *pixel) {
 	int Red_temp, Green_temp, Blue_temp;
 	
-	Red_temp = Red; Green_temp = Green; Blue_temp = Blue;
+	Red_temp = Red;
+	Green_temp = Green;
+	Blue_temp = Blue;
 	
-	pixel = (int)((Green_temp << 24) | (Blue_temp << 16) | (None << 8) | (Red_temp));
-	return pixel;
+	pixel = ((Blue_temp << 24) | (Green_temp << 16) | (None << 8) | (Red_temp));
+	
 }
 
 
